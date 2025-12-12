@@ -1,0 +1,16 @@
+.app {
+  min-height: 100vh;
+  background-color: #141414;
+}
+
+.movie-rows {
+  margin-top: -150px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .movie-rows {
+    margin-top: -100px;
+  }
+}

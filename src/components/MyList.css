@@ -1,0 +1,166 @@
+.mylist-page {
+  padding: 100px 60px 60px;
+  min-height: 100vh;
+}
+
+.mylist-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.mylist-header h1 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.mylist-header .count {
+  color: #808080;
+  font-size: 16px;
+}
+
+.mylist-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.mylist-empty h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.mylist-empty p {
+  color: #808080;
+  font-size: 16px;
+}
+
+.mylist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.mylist-item {
+  background: #181818;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.mylist-item:hover {
+  transform: scale(1.02);
+}
+
+.mylist-poster {
+  position: relative;
+  cursor: pointer;
+}
+
+.mylist-poster img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+.mylist-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mylist-poster:hover .mylist-overlay {
+  opacity: 1;
+}
+
+.play-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #000;
+  padding-left: 6px;
+}
+
+.mylist-info {
+  padding: 16px;
+}
+
+.mylist-info h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mylist-meta {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+.mylist-meta .rating {
+  color: #46d369;
+}
+
+.mylist-meta .year {
+  color: #fff;
+}
+
+.remove-btn {
+  width: 100%;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.remove-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .mylist-page {
+    padding: 80px 20px 40px;
+  }
+
+  .mylist-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .mylist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+}

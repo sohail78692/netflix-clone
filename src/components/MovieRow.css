@@ -1,0 +1,146 @@
+.movie-row {
+  margin-left: 60px;
+  margin-bottom: 30px;
+}
+
+.row-title {
+  color: #e5e5e5;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.row-wrapper {
+  position: relative;
+}
+
+.row-posters {
+  display: flex;
+  gap: 6px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.row-posters::-webkit-scrollbar {
+  display: none;
+}
+
+.poster-container {
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.poster-container:hover {
+  transform: scale(1.08);
+  z-index: 10;
+}
+
+.poster-container.large:hover {
+  transform: scale(1.05);
+}
+
+.row-poster {
+  width: 240px;
+  height: 135px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.row-poster.large {
+  width: 160px;
+  height: 240px;
+}
+
+.poster-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 8px 8px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  border-radius: 0 0 4px 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.poster-container:hover .poster-overlay {
+  opacity: 1;
+}
+
+.poster-overlay span {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 50px;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.row-wrapper:hover .scroll-button {
+  opacity: 1;
+}
+
+.scroll-button:hover {
+  background: rgba(20, 20, 20, 0.8);
+}
+
+.scroll-button.left {
+  left: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.scroll-button.right {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+@media (max-width: 768px) {
+  .movie-row {
+    margin-left: 20px;
+  }
+
+  .row-title {
+    font-size: 1.1rem;
+  }
+
+  .row-poster {
+    width: 150px;
+    height: 85px;
+  }
+
+  .row-poster.large {
+    width: 110px;
+    height: 165px;
+  }
+
+  .scroll-button {
+    display: none;
+  }
+}

@@ -1,0 +1,836 @@
+.footer-page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 3000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+
+.footer-page-content {
+  background: #141414;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  animation: slideUp 0.3s ease;
+  margin: auto;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-page-content .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #333;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 10;
+}
+
+.footer-page-content .close-btn:hover {
+  background: #555;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 40px 20px;
+  border-bottom: 1px solid #333;
+}
+
+.page-icon {
+  font-size: 32px;
+  color: #e50914;
+}
+
+.page-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.page-body {
+  padding: 30px 40px 40px;
+  color: #e5e5e5;
+  line-height: 1.7;
+}
+
+.page-body h3 {
+  color: #fff;
+  font-size: 20px;
+  margin: 30px 0 16px;
+  font-weight: 600;
+}
+
+.page-body h3:first-of-type {
+  margin-top: 20px;
+}
+
+.page-body p {
+  margin-bottom: 16px;
+  color: #b3b3b3;
+}
+
+.page-intro {
+  font-size: 18px;
+  color: #e5e5e5 !important;
+  margin-bottom: 24px !important;
+}
+
+.page-body ul, .page-body ol {
+  margin: 16px 0;
+  padding-left: 24px;
+}
+
+.page-body li {
+  margin-bottom: 10px;
+  color: #b3b3b3;
+}
+
+.page-body strong {
+  color: #fff;
+}
+
+.info-box {
+  background: #222;
+  border-left: 4px solid #e50914;
+  padding: 20px;
+  margin: 24px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.info-box h4 {
+  color: #fff;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Help Center */
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.help-card {
+  background: #222;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.help-card h4 {
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.help-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.help-card li {
+  padding: 8px 0;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.help-card li:last-child {
+  border-bottom: none;
+}
+
+.help-card li:hover {
+  color: #fff;
+}
+
+.contact-support {
+  text-align: center;
+  padding: 30px;
+  background: #222;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.contact-support h3 {
+  margin-top: 0 !important;
+}
+
+.support-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.support-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #e50914;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.support-btn:hover {
+  background: #f40612;
+}
+
+/* Gift Cards */
+.gift-cards-display {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.gift-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid #333;
+  position: relative;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.gift-card:hover {
+  transform: translateY(-4px);
+  border-color: #e50914;
+}
+
+.gift-card.featured {
+  border-color: #e50914;
+  transform: scale(1.05);
+}
+
+.gift-card.featured:hover {
+  transform: scale(1.08);
+}
+
+.gift-amount {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.gift-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.popular-tag {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e50914;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* News / Media Center */
+.news-list {
+  margin: 20px 0;
+}
+
+.news-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  font-size: 12px;
+  color: #808080;
+  text-transform: uppercase;
+}
+
+.news-item h4 {
+  color: #fff;
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.news-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.resource-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.resource-btn {
+  padding: 12px 20px;
+  background: #333;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.resource-btn:hover {
+  background: #444;
+  border-color: #fff;
+}
+
+/* Investor Relations */
+.stock-info {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.stock-card {
+  background: #222;
+  padding: 24px 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.stock-label {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.stock-price {
+  font-size: 32px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.stock-change {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.stock-change.positive {
+  color: #46d369;
+}
+
+.financial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.financial-item {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fin-label {
+  font-size: 14px;
+  color: #808080;
+}
+
+.fin-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Jobs */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.benefit-card {
+  background: #222;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.benefit-card h4 {
+  color: #fff;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.benefit-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.jobs-list {
+  margin: 20px 0;
+}
+
+.job-item {
+  padding: 16px 20px;
+  background: #222;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.job-item:hover {
+  background: #2a2a2a;
+}
+
+.job-item h4 {
+  color: #fff;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.job-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #808080;
+}
+
+.view-all-btn {
+  width: 100%;
+  padding: 14px;
+  background: #e50914;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.2s;
+}
+
+.view-all-btn:hover {
+  background: #f40612;
+}
+
+/* Privacy Controls */
+.privacy-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.control-btn {
+  padding: 12px 20px;
+  background: transparent;
+  border: 1px solid #e50914;
+  border-radius: 4px;
+  color: #e50914;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.control-btn:hover {
+  background: #e50914;
+  color: #fff;
+}
+
+/* Cookie Preferences */
+.cookie-options {
+  margin: 20px 0;
+}
+
+.cookie-option {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.cookie-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.cookie-header h4 {
+  color: #fff;
+  margin: 0;
+  font-size: 16px;
+}
+
+.always-on {
+  background: #333;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #808080;
+}
+
+.cookie-option p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.toggle {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #333;
+  border-radius: 26px;
+  transition: background 0.2s;
+}
+
+.slider:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 3px;
+  bottom: 3px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.toggle input:checked + .slider {
+  background: #e50914;
+}
+
+.toggle input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.save-preferences-btn {
+  width: 100%;
+  padding: 14px;
+  background: #e50914;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.2s;
+}
+
+.save-preferences-btn:hover {
+  background: #f40612;
+}
+
+/* Corporate Information */
+.company-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 30px 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  border-radius: 8px;
+}
+
+.stat-number {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #e50914;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #808080;
+}
+
+.leadership-list {
+  margin: 16px 0;
+}
+
+.leader-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #333;
+  color: #b3b3b3;
+}
+
+.leader-item strong {
+  color: #fff;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.social-links a {
+  width: 44px;
+  height: 44px;
+  background: #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  transition: background 0.2s;
+}
+
+.social-links a:hover {
+  background: #e50914;
+}
+
+/* Contact Us */
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.contact-card {
+  background: #222;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contact-icon {
+  font-size: 36px;
+  color: #e50914;
+  margin-bottom: 16px;
+}
+
+.contact-card h4 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.contact-card a {
+  color: #e50914;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+.start-chat-btn {
+  padding: 10px 24px;
+  background: #e50914;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.start-chat-btn:hover {
+  background: #f40612;
+}
+
+.contact-form {
+  margin-top: 20px;
+}
+
+.contact-form .form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 16px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: #333;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #e50914;
+}
+
+.contact-form select {
+  cursor: pointer;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #e50914;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: #f40612;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-page-overlay {
+    padding: 0;
+  }
+
+  .footer-page-content {
+    border-radius: 0;
+    min-height: 100vh;
+  }
+
+  .page-header {
+    padding: 60px 20px 20px;
+  }
+
+  .page-header h1 {
+    font-size: 24px;
+  }
+
+  .page-body {
+    padding: 20px;
+  }
+
+  .help-grid,
+  .benefits-grid,
+  .financial-grid,
+  .contact-methods {
+    grid-template-columns: 1fr;
+  }
+
+  .company-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gift-cards-display {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gift-card.featured {
+    transform: scale(1);
+  }
+
+  .contact-form .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stock-card {
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+  }
+
+  .support-buttons {
+    flex-direction: column;
+  }
+}
