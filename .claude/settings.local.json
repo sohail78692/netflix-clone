@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(npm create vite:*)",
-      "Bash(git init:*)"
-    ]
-  }
-}
