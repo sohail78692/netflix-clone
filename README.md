@@ -293,5 +293,5 @@ If you have any questions about this project, feel free to open an issue.
 </p>
 
 <p align="center">
-  Made with ❤️ for learning purposes
+  Made with ❤️ by Sohail for learning purposes
 </p>
